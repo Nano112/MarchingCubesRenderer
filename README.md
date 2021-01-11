@@ -7,4 +7,4 @@ The marching cube algorithm renders out an isosurface to a rasterized set of tri
 
 ##Example
 
-![Rendered Noise Isosurface](https://github.com/Nano112/MarchingCubeRenderer/blob/master/examples/isosurface.png?raw=true)
+![Rendered Noise Isosurface](https://github.com/Nano112/MarchingCubesRenderer/blob/master/examples/isosurface.png?raw=true)
