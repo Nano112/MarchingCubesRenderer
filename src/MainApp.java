@@ -63,7 +63,7 @@ public class MainApp extends PApplet {
                 config += 1;
             }
         }
-        if((config != 0) && (config != 255) )
+        if(false && (config != 0) && (config != 255) )
         {
             drawVert(config, vertices);
             drawCube(vertices);
@@ -174,10 +174,10 @@ public class MainApp extends PApplet {
         cam.controllable = true;
         cam.sensitivity = 1;
         triangulation = getTriangulation(
-                new PVector(-50,-50,-50),
-                100,
-                50,
-                (p) -> sphereDistanceFunction(p, new PVector(0,0,0),50) + noise(p.x*0.03f,p.y*0.03f,p.z*0.03f)*0.5f
+                new PVector(0,0,0),
+                150,
+                80,
+                (p) ->  noise(p.x*0.03f+(float)frameCount/100,p.y*0.03f,p.z*0.03f)
                 ,0.5f);
 
     }
@@ -188,6 +188,7 @@ public class MainApp extends PApplet {
         lights();
         println(frameRate);
         background(0);
+
         shape(triangulation);
 
     }
